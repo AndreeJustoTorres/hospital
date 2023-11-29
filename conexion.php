@@ -9,5 +9,5 @@
         echo 'Succesfully Connected';
     }
 ?>
-<!--$mysqli=new mysqli("localhost","root","","hospital32","3305");-->
+<!--$mysqli=new mysqli("localhost","root","","hospital32","3306");-->
 <!--  -->
