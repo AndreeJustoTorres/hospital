@@ -6,6 +6,7 @@
     <title>Medico</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/61ac329b12.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <script>
@@ -14,13 +15,14 @@
             return respuesta
         }
     </script>
+    <a class="btn btn-outline-info" href="http://localhost/HospitalFinal/#">HOME</a>
     <a href="http://localhost/HospitalFinal/#">HOME</a>
     <h1 class="text-center p-3">MÉDICO</h1>
     <?php
     include "modelo/conexion.php";
     include "controlador/eliminar_medico.php";
     ?>
-    <div class="container-fluid row">
+    <div class="container-form">
         <form class="col-4 p-3" method="POST">
             <h3 class="text-center text-secondary">Registro Médicos</h3>
             <?php
@@ -44,8 +46,8 @@
             </div>
             <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok">Registrar</button>
         </form>
-        <div class="col-8 p-4">
-            <table class="table table-dark table-hover">
+        <div class="col-8 p-4 myTable"> 
+            <table class="table table-primary  table-hover">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -55,7 +57,7 @@
                         <th scope="col"></th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="table-group-divider">>
                     <?php
                     include "modelo/conexion.php";
                     $sql=$conexion->query(" SELECT * FROM medico ");
@@ -76,7 +78,7 @@
             </table>
         </div>
     </div>
-    <a href="reporte3.php">OBTENER REPORTE</a>
+    <a class="btn btn-outline-warning"  href="reporte.php">OBTENER REPORTE</a>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
